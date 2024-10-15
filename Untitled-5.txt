@@ -1,0 +1,44 @@
+#include<stdio.h>
+using namespace std;
+template<class X>
+class queue{
+    private:
+        X *arr;
+        int capacity;
+        int front;
+        int rear;
+        int count;
+    public:
+        queue(){
+            capacity = 0;
+            front = -1;
+            rear = -1;
+            count = 0;
+        }
+        void isfull(){
+            if(front == 0 && rear == capacity - 1){
+                return true;}
+            else{
+                return false;}
+        }
+        void isEmpty(){
+            if(front == -1){
+                return true;}
+            else{
+                return false;}
+        }
+        void operator +(){
+            
+        }
+        void operator -(){
+            
+        }
+        void display(){
+            int j;
+            if(isEmpty()){
+                cout<<"THE QUEUE IS EMPTY!"<<endl;
+            }
+            
+        }
+
+};  

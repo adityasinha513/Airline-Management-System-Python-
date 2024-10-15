@@ -1,0 +1,19 @@
+def modify_linked_list(input_stack):
+    linked_list=LinkedList()
+    temp_stack=Stack(10)
+    temp_queue=Queue(10)
+    while not input_stack.is_empty():
+        temp_stack.push(input_stack.pop())
+        temp_.queue.enqueue(input_stack.pop())
+    while not(temp_stack.is_empty()) and not (temp_queue.is_empty()):
+        linked_list.add(temp_stack.pop()+temp_stack.pop())
+        linked_list.add(temp_queue.dequeue()+temp_queue.dequeue())    
+    temp =linked_list.get_head()
+    while temp.get_next():
+        if(temp.get_data()+temp.get_next().get_data())%2==0:
+            temp.set_data(temp.get_data()*2)
+        else:
+            temp.set_data(temp.get_next().get_data()*2)
+        temp=temp.get_next()
+    return linked_list
+    

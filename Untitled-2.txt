@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+template<class t>
+class list
+{
+    t data;
+    list*next;
+    public:
+    list()
+    {
+        next=NULL;
+    }
+    void create()
+    {
+        list<t>*start=this;
+        list<t>*node=new list<t>;
+        t d;
+        cout<<"Enter data ";
+        cin>>d;
+        node->dat=d;
+        node=>next=NULL;
+        while(start->next=NULL)
+        {
+            start=start->next;
+        }
+        start->next=node;
+    }
+}

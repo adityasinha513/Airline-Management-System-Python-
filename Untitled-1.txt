@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+template<class T> T sum(T a[], int l)
+{
+        T s = a[0];
+        for (int i = 1; i < l; i ++)
+                s += a[i];
+
+        return s;
+}
+
+int main() {
+        int int_data[5];
+        float float_data[5];
+        int i = 0;
+
+        cout << "\nInsert 5 integers : \n" << endl;
+        for (; i < 5; i++)
+                cin >> int_data[i];
+        
+        cout << "\nSum of the above integers is : " << sum(int_data, 5) << endl;
+
+        cout << "\nInset 5 floats :: \n" << endl;
+        for (i = 0; i < 5; i ++)
+                cin >> float_data[i];
+
+        cout << "\nSum of the above float is : " << sum(float_data, 5) << endl;
+
+        // cin.get();
+        return 0;
+}
+
